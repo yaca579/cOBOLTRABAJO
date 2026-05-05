@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Circle?>
+
+<VBox prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vidalbet.RuletaController">
+
+    <HBox alignment="CENTER_LEFT" prefHeight="50.0" style="-fx-background-color: #12151B; -fx-padding: 0 20;">
+        <Button onAction="#navTornar" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px; -fx-cursor: hand;" text="← VOLVER" />
+        <Region HBox.hgrow="ALWAYS" />
+        <Label fx:id="lblSaldo" style="-fx-text-fill: #E5C04A; -fx-font-size: 18px; -fx-font-weight: bold;" text="Saldo: 30.000,00 €" />
+    </HBox>
+
+    <VBox alignment="CENTER" prefHeight="250.0" style="-fx-background-color: #1A252F; -fx-border-color: #0F161C; -fx-border-width: 0 0 5 0;">
+        <StackPane fx:id="wheelVisualContainer">
+            <Circle fx:id="circuloResultado" radius="90.0" style="-fx-fill: #0B0D11; -fx-stroke: #E5C04A; -fx-stroke-width: 4;" />
+            <VBox alignment="CENTER">
+                <Label fx:id="lblNumeroGuanyador" style="-fx-text-fill: white; -fx-font-size: 65px; -fx-font-weight: bold;" text="0" />
+                <Label fx:id="lblCrupierStatus" style="-fx-text-fill: #E5C04A; -fx-font-size: 12px;" text="VERD | ZERO | ZERO" />
+            </VBox>
+        </StackPane>
+        <Label fx:id="lblMissatge" style="-fx-background-color: #0A0F14; -fx-text-fill: white; -fx-padding: 8 20; -fx-background-radius: 20; -fx-font-size: 16px;" text="¡Hagan sus apuestas!">
+            <VBox.margin>
+                <Insets top="15.0" />
+            </VBox.margin>
+        </Label>
+    </VBox>
+
+    <VBox alignment="CENTER" spacing="15.0" style="-fx-background-color: #0F6A37;" VBox.vgrow="ALWAYS">
+
+        <GridPane alignment="CENTER" hgap="2" vgap="2">
+
+            <Button onAction="#seleccionarNumero" prefHeight="136.0" prefWidth="60.0" style="-fx-background-color: #2E7D32; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 20px; -fx-border-color: white; -fx-border-width: 1; -fx-cursor: hand;" text="0" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.rowSpan="3" />
+
+            <Button onAction="#seleccionarNumero" prefHeight="44.0" prefWidth="60.0" style="-fx-background-color: #D32F2F; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18px; -fx-border-color: white; -fx-border-width: 1; -fx-cursor: hand;" text="3" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            <Button onAction="#seleccionarNumero" prefHeight="44.0" prefWidth="60.0" style="-fx-background-color: #111111; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18px; -fx-border-color: white; -fx-border-width: 1; -fx-cursor: hand;" text="6" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+            <Button onAction="#seleccionarNumero" prefHeight="44.0" prefWidth="60.0" style="-fx-background-color: #D32F2F; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18px; -fx-border-color: white; -fx-border-width: 1; -fx-cursor: hand;" text="9" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+            <Button onAction="#seleccionarNumero" prefHeight="44.0" prefWidth="60.0" style="-fx-background-color: #D32F2F; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18px; -fx-border-color: white; -fx-border-width: 1; -fx-cursor: hand;" text="12" GridPane.columnIndex="4" GridPane.rowIndex="0" />
+            <Button onAction="#seleccionarNumero" prefHeight="44.0" prefWidth="60.0" style="-fx-background-color: #111111; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18px; -fx-border-color: white; -fx-border-width: 1; -fx-cursor: hand;" text="15" GridPane.columnIndex="5" GridPane.rowIndex="0" />
+            <Button onAction="#seleccionarNumero" prefHeight="44.0" prefWidth="60.0" style="-fx-background-color: #D32F2F; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18px; -fx-border-color: white; -fx-border-width: 1; -fx-cursor: hand;" text="18" GridPane.columnIndex="6" GridPane.rowIndex="0" />
+            <Button onAction="#seleccionarNumero" prefHeight="44.0" prefWidth="60.0" style="-fx-background-color: #D32F2F; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18px; -fx-border-color: white; -fx-border-width: 1; -fx-cursor: hand;" text="21" GridPane.columnIndex="7" GridPane.rowIndex="0" />
+            <Button onAction="#seleccionarNumero" prefHeight="44.0" prefWidth="60.0" style="-fx-background-color: #111111; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18px; -fx-border-color: white; -fx-border-width: 1; -fx-cursor: hand;" text="24" GridPane.columnIndex="8" GridPane.rowIndex="0" />
+            <Button onAction="#seleccionarNumero" prefHeight="44.0" prefWidth="60.0" style="-fx-background-color: #D32F2F; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18px; -fx-border-color: white; -fx-border-width: 1; -fx-cursor: hand;" text="27" GridPane.columnIndex="9" GridPane.rowIndex="0" />
+            <Button onAction="#seleccionarNumero" prefHeight="44.0" prefWidth="60.0" style="-fx-background-color: #D32F2F; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18px; -fx-border-color: white; -fx-border-width: 1; -fx-cursor: hand;" text="30" GridPane.columnIndex="10" GridPane.rowIndex="0" />
+            <Button onAction="#seleccionarNumero" prefHeight="44.0" prefWidth="60.0" style="-fx-background-color: #111111; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18px; -fx-border-color: white; -fx-border-width: 1; -fx-cursor: hand;" text="33" GridPane.columnIndex="11" GridPane.rowIndex="0" />
+            <Button onAction="#seleccionarNumero" prefHeight="44.0" prefWidth="60.0" style="-fx-background-color: #D32F2F; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18px; -fx-border-color: white; -fx-border-width: 1; -fx-cursor: hand;" text="36" GridPane.columnIndex="12" GridPane.rowIndex="0" />
+
+            <Button onAction="#seleccionarNumero" prefHeight="44.0" prefWidth="60.0" style="-fx-background-color: #111111; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18px; -fx-border-color: white; -fx-border-width: 1; -fx-cursor: hand;" text="2" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button onAction="#seleccionarNumero" prefHeight="44.0" prefWidth="60.0" style="-fx-background-color: #D32F2F; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18px; -fx-border-color: white; -fx-border-width: 1; -fx-cursor: hand;" text="5" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Button onAction="#seleccionarNumero" prefHeight="44.0" prefWidth="60.0" style="-fx-background-color: #111111; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18px; -fx-border-color: white; -fx-border-width: 1; -fx-cursor: hand;" text="8" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Button onAction="#seleccionarNumero" prefHeight="44.0" prefWidth="60.0" style="-fx-background-color: #111111; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18px; -fx-border-color: white; -fx-border-width: 1; -fx-cursor: hand;" text="11" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <Button onAction="#seleccionarNumero" prefHeight="44.0" prefWidth="60.0" style="-fx-background-color: #D32F2F; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18px; -fx-border-color: white; -fx-border-width: 1; -fx-cursor: hand;" text="14" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+            <Button onAction="#seleccionarNumero" prefHeight="44.0" prefWidth="60.0" style="-fx-background-color: #111111; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18px; -fx-border-color: white; -fx-border-width: 1; -fx-cursor: hand;" text="17" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+            <Button onAction="#seleccionarNumero" prefHeight="44.0" prefWidth="60.0" style="-fx-background-color: #111111; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18px; -fx-border-color: white; -fx-border-width: 1; -fx-cursor: hand;" text="20" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+            <Button onAction="#seleccionarNumero" prefHeight="44.0" prefWidth="60.0" style="-fx-background-color: #D32F2F; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18px; -fx-border-color: white; -fx-border-width: 1; -fx-cursor: hand;" text="23" GridPane.columnIndex="8" GridPane.rowIndex="1" />
+            <Button onAction="#seleccionarNumero" prefHeight="44.0" prefWidth="60.0" style="-fx-background-color: #111111; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18px; -fx-border-color: white; -fx-border-width: 1; -fx-cursor: hand;" text="26" GridPane.columnIndex="9" GridPane.rowIndex="1" />
+            <Button onAction="#seleccionarNumero" prefHeight="44.0" prefWidth="60.0" style="-fx-background-color: #111111; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18px; -fx-border-color: white; -fx-border-width: 1; -fx-cursor: hand;" text="29" GridPane.columnIndex="10" GridPane.rowIndex="1" />
+            <Button onAction="#seleccionarNumero" prefHeight="44.0" prefWidth="60.0" style="-fx-background-color: #D32F2F; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18px; -fx-border-color: white; -fx-border-width: 1; -fx-cursor: hand;" text="32" GridPane.columnIndex="11" GridPane.rowIndex="1" />
+            <Button onAction="#seleccionarNumero" prefHeight="44.0" prefWidth="60.0" style="-fx-background-color: #111111; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18px; -fx-border-color: white; -fx-border-width: 1; -fx-cursor: hand;" text="35" GridPane.columnIndex="12" GridPane.rowIndex="1" />
+
+            <Button onAction="#seleccionarNumero" prefHeight="44.0" prefWidth="60.0" style="-fx-background-color: #D32F2F; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18px; -fx-border-color: white; -fx-border-width: 1; -fx-cursor: hand;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button onAction="#seleccionarNumero" prefHeight="44.0" prefWidth="60.0" style="-fx-background-color: #111111; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18px; -fx-border-color: white; -fx-border-width: 1; -fx-cursor: hand;" text="4" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Button onAction="#seleccionarNumero" prefHeight="44.0" prefWidth="60.0" style="-fx-background-color: #D32F2F; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18px; -fx-border-color: white; -fx-border-width: 1; -fx-cursor: hand;" text="7" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Button onAction="#seleccionarNumero" prefHeight="44.0" prefWidth="60.0" style="-fx-background-color: #111111; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18px; -fx-border-color: white; -fx-border-width: 1; -fx-cursor: hand;" text="10" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <Button onAction="#seleccionarNumero" prefHeight="44.0" prefWidth="60.0" style="-fx-background-color: #111111; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18px; -fx-border-color: white; -fx-border-width: 1; -fx-cursor: hand;" text="13" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+            <Button onAction="#seleccionarNumero" prefHeight="44.0" prefWidth="60.0" style="-fx-background-color: #D32F2F; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18px; -fx-border-color: white; -fx-border-width: 1; -fx-cursor: hand;" text="16" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+            <Button onAction="#seleccionarNumero" prefHeight="44.0" prefWidth="60.0" style="-fx-background-color: #D32F2F; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18px; -fx-border-color: white; -fx-border-width: 1; -fx-cursor: hand;" text="19" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+            <Button onAction="#seleccionarNumero" prefHeight="44.0" prefWidth="60.0" style="-fx-background-color: #111111; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18px; -fx-border-color: white; -fx-border-width: 1; -fx-cursor: hand;" text="22" GridPane.columnIndex="8" GridPane.rowIndex="2" />
+            <Button onAction="#seleccionarNumero" prefHeight="44.0" prefWidth="60.0" style="-fx-background-color: #D32F2F; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18px; -fx-border-color: white; -fx-border-width: 1; -fx-cursor: hand;" text="25" GridPane.columnIndex="9" GridPane.rowIndex="2" />
+            <Button onAction="#seleccionarNumero" prefHeight="44.0" prefWidth="60.0" style="-fx-background-color: #111111; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18px; -fx-border-color: white; -fx-border-width: 1; -fx-cursor: hand;" text="28" GridPane.columnIndex="10" GridPane.rowIndex="2" />
+            <Button onAction="#seleccionarNumero" prefHeight="44.0" prefWidth="60.0" style="-fx-background-color: #111111; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18px; -fx-border-color: white; -fx-border-width: 1; -fx-cursor: hand;" text="31" GridPane.columnIndex="11" GridPane.rowIndex="2" />
+            <Button onAction="#seleccionarNumero" prefHeight="44.0" prefWidth="60.0" style="-fx-background-color: #D32F2F; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18px; -fx-border-color: white; -fx-border-width: 1; -fx-cursor: hand;" text="34" GridPane.columnIndex="12" GridPane.rowIndex="2" />
+
+            <Button prefHeight="40.0" prefWidth="246.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-weight: bold; -fx-border-color: white; -fx-border-width: 1;" text="1st 12" GridPane.columnIndex="1" GridPane.columnSpan="4" GridPane.rowIndex="3" />
+            <Button prefHeight="40.0" prefWidth="246.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-weight: bold; -fx-border-color: white; -fx-border-width: 1;" text="2nd 12" GridPane.columnIndex="5" GridPane.columnSpan="4" GridPane.rowIndex="3" />
+            <Button prefHeight="40.0" prefWidth="246.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-weight: bold; -fx-border-color: white; -fx-border-width: 1;" text="3rd 12" GridPane.columnIndex="9" GridPane.columnSpan="4" GridPane.rowIndex="3" />
+
+            <Button onAction="#apostarFalta" prefHeight="40.0" prefWidth="122.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-weight: bold; -fx-border-color: white; -fx-border-width: 1; -fx-cursor: hand;" text="1 to 18" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+            <Button onAction="#apostarPar" prefHeight="40.0" prefWidth="122.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-weight: bold; -fx-border-color: white; -fx-border-width: 1; -fx-cursor: hand;" text="EVEN" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+
+            <Button onAction="#apostarVermell" prefHeight="40.0" prefWidth="122.0" style="-fx-background-color: #D32F2F; -fx-text-fill: white; -fx-font-weight: bold; -fx-border-color: white; -fx-border-width: 1; -fx-cursor: hand;" text="RED" GridPane.columnIndex="5" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+            <Button onAction="#apostarNegre" prefHeight="40.0" prefWidth="122.0" style="-fx-background-color: #111111; -fx-text-fill: white; -fx-font-weight: bold; -fx-border-color: white; -fx-border-width: 1; -fx-cursor: hand;" text="BLACK" GridPane.columnIndex="7" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+
+            <Button onAction="#apostarImpar" prefHeight="40.0" prefWidth="122.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-weight: bold; -fx-border-color: white; -fx-border-width: 1; -fx-cursor: hand;" text="ODD" GridPane.columnIndex="9" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+            <Button onAction="#apostarPasa" prefHeight="40.0" prefWidth="122.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-weight: bold; -fx-border-color: white; -fx-border-width: 1; -fx-cursor: hand;" text="19 to 36" GridPane.columnIndex="11" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+        </GridPane>
+
+        <VBox alignment="CENTER" spacing="10.0" style="-fx-padding: 20 0 0 0;">
+            <HBox alignment="CENTER" spacing="15.0">
+                <Label style="-fx-text-fill: white; -fx-font-weight: bold;" text="Importe (€):" />
+                <TextField fx:id="txtQuantitat" alignment="CENTER" prefWidth="100.0" text="5" />
+                <Button onAction="#allIn" style="-fx-background-color: #E5C04A; -fx-font-weight: bold; -fx-cursor: hand;" text="ALL IN" />
+            </HBox>
+
+            <HBox alignment="CENTER" spacing="15.0">
+                <Label style="-fx-text-fill: white; -fx-font-weight: bold;" text="Apostar a un número concreto:" />
+                <TextField fx:id="txtNumero" alignment="CENTER" prefWidth="60.0" promptText="0-36" />
+                <Button onAction="#apostarNumero" style="-fx-background-color: white; -fx-text-fill: black; -fx-font-weight: bold; -fx-cursor: hand;" text="COLOCAR FICHA" />
+            </HBox>
+        </VBox>
+
+    </VBox>
+</VBox>
